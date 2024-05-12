@@ -1,3 +1,4 @@
+"use client";
 import { createSlice } from "@reduxjs/toolkit";
 import { LoginThunk, Google_Login } from "./loginThunk";
 import decodeJWT from "@/utils/decodeJwt";
@@ -5,7 +6,7 @@ import decodeJWT from "@/utils/decodeJwt";
 const loginInitials = {
   isLoading: false,
   user: null,
-  successStatus: localStorage.getItem("userInfo") ? true : false,
+  successStatus: false,
   successMessage: undefined,
   errorStatus: false,
   errorMessage: undefined,
